@@ -21,7 +21,7 @@ const TransactionsList = () => {
     axios.get(`https://whispering-forest-90538.herokuapp.com/api/transactions/${id}`)
       .then((res) => {
         const updatedItem = {...res.data, done: !res.data.done}
-        axios.put('http://localhost:8000/api/transactions/', {...updatedItem})
+        axios.put('https://whispering-forest-90538.herokuapp.com/api/transactions/', {...updatedItem})
           .then((res) => {
             setTransactions(transactions.map((transaction) => transaction._id === id ? 
             {...transaction, done: !transaction.done} : transaction));
