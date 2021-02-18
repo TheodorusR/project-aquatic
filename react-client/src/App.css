@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  font-family: 'Merienda', cursive;
+}
+
+.home-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+.home-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(70, 77, 83);
+  mix-blend-mode: overlay;
+  z-index: -1;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+.shop .header {
+  font-size: 1.6rem;
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(186, 202, 231), rgb(5, 60, 212));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.net-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: rgba(255,255,255, 0.3);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.cart-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.cart-backdrop {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(36, 32, 32, 0.3);
+}
+
+.cart-container .cart {
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  box-shadow: -3px 2px #888888;
+  padding: 70px 10px 5px;
+}
+
+.cart .tab {
+  position: absolute;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  left:-16%;
+  border-radius: 20% 0 0 20%;
+  background-color:white;
+  cursor: pointer;
+  box-shadow: -3px 2px #888888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart .tab i{
+  font-size: 1.5rem;
+}
+
+.cart .tab p {
+  font-size: 0.7rem;
+  position: absolute;
+  top: 13%;
+  right: 10%;
+}
+
+.shop-list {
+  font-size: 1rem;
+}
+
+.item-header:hover {
+  opacity: 0.7;
+  color: rgb(5, 60, 212);
+}
+
+.transaction-list {
+  margin: 100px auto 20px;
+}
+
+.earnings-jumbotron {
+  margin: 100px auto 20px;
+  box-shadow: 5px 8px 8px #888888;
+}
+
+.earnings-jumbotron .inactive {
+  cursor: pointer;
+}
+
+.earnings-jumbotron .statistic {
+  background-color: white;
+  padding: 20px 60px 20px 20px;
+}
+
+.percent-bar {
+  position: relative;
+  background-image: linear-gradient(rgb(18, 67, 175), rgb(38, 140, 187));
+  height: 10px;
+}
+
+.percent-bar .percent-stat {
+  position: absolute;
+  top: -8px;
+  right: -50px;
+}
