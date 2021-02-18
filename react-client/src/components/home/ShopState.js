@@ -80,7 +80,7 @@ export const ShopProvider = ({children}) => {
         done: false
       })
     }
-    axios.post('http://localhost:8000/api/transactions/', transactions)
+    axios.post('https://whispering-forest-90538.herokuapp.com/api/transactions/', transactions)
       .then((res) => {
         console.log(res);
         // clearItems();

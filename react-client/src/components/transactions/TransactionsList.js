@@ -6,7 +6,7 @@ const TransactionsList = () => {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/transactions')
+    axios.get('https://whispering-forest-90538.herokuapp.com/api/transactions')
       .then((res) => {
         setTransactions(res.data);
         console.log(res);
@@ -18,7 +18,7 @@ const TransactionsList = () => {
   }, []);
 
   const toggleDone = (id) => {
-    axios.get(`http://localhost:8000/api/transactions/${id}`)
+    axios.get(`https://whispering-forest-90538.herokuapp.com/api/transactions/${id}`)
       .then((res) => {
         const updatedItem = {...res.data, done: !res.data.done}
         axios.put('http://localhost:8000/api/transactions/', {...updatedItem})
