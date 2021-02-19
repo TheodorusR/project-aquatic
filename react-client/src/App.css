@@ -131,9 +131,8 @@
   text-align: center;
   width: 25px;
   position: absolute; 
-  left: 0;
-  top: 0;
-  transform: translate(-100%, 100%);
+  left: -10%;
+  top: 35%;
   transition: opacity 0.3s ease;
   opacity: 0;
 }
