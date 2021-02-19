@@ -20,7 +20,7 @@ function App() {
           <Route exact path='/'>
             <ShopProvider>
               <div className='home-container'>
-                <video src={aquarium} muted autoPlay loop></video>
+                <video src={aquarium} muted playsInline autoPlay loop></video>
                 <div className='overlay'></div>
                 <Container>
                   <Welcome />
