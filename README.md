@@ -13,6 +13,6 @@ View the transactions log to see active orders or mark them complete.
 See how much has been earned and draw shopping insights from the statistics!
 
 4. **Enjoy beautiful scenery**  
-Of this fish. Or that fish. Them fish. Try things and don't forget to have fun!
+Of this fish. Or that fish. Them fishes. Try things and don't forget to have fun!
 
 Libraries/techs used: Node.js, Express, React, Mongoose & MongoDB, Framer-motion, Bootstrap & Reactstrap, Axios, React-Router.
