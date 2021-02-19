@@ -27,7 +27,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgb(70, 77, 83);
+  background: #60abce;
   mix-blend-mode: overlay;
   z-index: -1;
 }
