@@ -18,7 +18,7 @@ const Earnings = () => {
   const [totalQuantity, setTotalQuantity] = useState(0);
 
   useEffect(() => {
-    axios.get('https://whispering-forest-90538.herokuapp.com/api/transactions')
+    axios.get('https://project-aquatic.herokuapp.com/api/transactions')
       .then((res) => {
         const doneTransactions = res.data.filter((item) => item.done)
         setTransactions(doneTransactions);

@@ -94,7 +94,7 @@ export const ShopProvider = ({children}) => {
         done: false
       })
     }
-    axios.post('https://whispering-forest-90538.herokuapp.com/api/transactions/', transactions)
+    axios.post('https://project-aquatic.herokuapp.com/api/transactions/', transactions)
       .then((res) => {
         console.log(res);
         // clearItems();

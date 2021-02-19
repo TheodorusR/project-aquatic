@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Row,
-  Col,
-  Container,
   CardDeck
 } from 'reactstrap';
 import Fish from './Fish';

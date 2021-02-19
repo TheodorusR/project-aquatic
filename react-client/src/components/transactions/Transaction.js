@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Card, CardHeader, CardBody, CardText} from 'reactstrap';
 
 const Transaction = ({transaction, toggleDone}) => {
