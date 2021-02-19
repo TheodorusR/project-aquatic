@@ -3,7 +3,8 @@ import axios from 'axios';
 
 const ACTIONS = {
   ADD_ITEM : 'ADD_ITEM',
-  CLEAR_ITEMS : 'CLEAR_ITEMS'
+  CLEAR_ITEMS : 'CLEAR_ITEMS',
+  REMOVE_ITEM : 'REMOVE_ITEM'
 }
 
 const reducer = (state, action) => {
@@ -29,6 +30,12 @@ const reducer = (state, action) => {
           items: [...state.items, action.payload]
         })
       }
+
+    case ACTIONS.REMOVE_ITEM:
+      return({
+        ...state,
+        items: state.items.filter((item) => item.id !== action.payload)
+      })
 
     case ACTIONS.CLEAR_ITEMS:
       return ({
@@ -64,6 +71,13 @@ export const ShopProvider = ({children}) => {
     }
   }
 
+  const removeItem = (id) => {
+    dispatch({
+      type: ACTIONS.REMOVE_ITEM,
+      payload: id
+    })
+  }
+
   const clearItems = () => {
     dispatch({
       type: ACTIONS.CLEAR_ITEMS
@@ -94,6 +108,7 @@ export const ShopProvider = ({children}) => {
     value={{
       items: state.items,
       addItem,
+      removeItem,
       clearItems,
       proceedBuy
     }}

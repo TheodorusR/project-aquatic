@@ -28,7 +28,7 @@ const ShoppingCart = () => {
         </div>
         <div className='shop-list'>
           {items.length > 0 ? 
-          <ListGroup className='mb-3'>
+          <ListGroup className='mb-3 pl-4'>
             {items.map((item, index) => <Item key={index} item={item}/>)}
           </ListGroup> :
           <h3 className='text-center mb-4'>Cart Empty</h3>}
