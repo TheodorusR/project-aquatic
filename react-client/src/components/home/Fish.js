@@ -20,7 +20,7 @@ const Fish = ({item}) => {
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Buy {item.name}</ModalHeader>
         <ModalBody className='d-flex justify-content-center align-items-center'>
-          <img height='100px' src={item.imgSource} alt={item.name} />
+          <img className='img-border' height='100px' src={item.imgSource} alt={item.name} />
           <div className='ml-4 input-quantity'>
             <Label htmlFor='quantity'>Quantity:</Label>
             <Input 

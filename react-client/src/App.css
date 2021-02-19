@@ -62,6 +62,11 @@
   cursor: pointer;
 }
 
+.img-border {
+  border: 3px solid white;
+  box-shadow: 2px 2px 5px 2px #888888;
+}
+
 .cart-container {
   position: fixed;
   top: 0;
@@ -140,8 +145,6 @@
 .item-container:hover > .remove-btn {
   opacity: 1;
 }
-
-.item-header
 
 .transaction-list {
   margin: 100px auto 20px;

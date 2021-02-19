@@ -15,7 +15,7 @@ const Transaction = ({transaction, toggleDone}) => {
         <p>Status: {transaction.done ? 'Completed' : 'In Progress'}</p>
       </CardHeader>
       <CardBody>
-        <CardText>Amount: {transaction.price}</CardText>
+        <CardText>Amount: Rp{transaction.price}</CardText>
         <CardText>ID: {transaction._id}</CardText>
         <CardText>Date: {new Date(transaction.date).toLocaleString()}</CardText>
       </CardBody>
