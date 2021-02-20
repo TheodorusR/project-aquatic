@@ -122,6 +122,9 @@
 
 .shop-list {
   font-size: 1rem;
+  overflow: auto;
+  height: 100%;
+  padding: 5px 0;
 }
 
 .item-header:hover {
