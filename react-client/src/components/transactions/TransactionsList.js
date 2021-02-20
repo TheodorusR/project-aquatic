@@ -4,12 +4,14 @@ import axios from 'axios';
 
 const TransactionsList = () => {
   const [transactions, setTransactions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     axios.get('https://project-aquatic.herokuapp.com/api/transactions')
       .then((res) => {
         setTransactions(res.data);
-        console.log(res);
+        setIsLoading(false);
       })
       .catch((err) => {
         setTransactions([]);
@@ -38,7 +40,7 @@ const TransactionsList = () => {
       <small style={{color: 'white'}} className='mb-5'>(Double click to toggle status.)</small>
       {transactions.length > 0 ? 
         transactions.map((transaction) => <Transaction key={transaction._id} toggleDone={toggleDone} transaction={transaction} />) :
-        <h3 className='mt-4'>No transactions to show.</h3>
+        isLoading ? <h3 className='mt-4'>Fetching, please wait...</h3> : <h3 className='mt-4'>No transactions to show.</h3>
       }
     </div>
   )

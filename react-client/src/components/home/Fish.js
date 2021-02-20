@@ -44,7 +44,7 @@ const Fish = ({item}) => {
             addItem(item, quantity);
             setQuantity(0);
             toggle();
-          }}>Proceed</Button>
+          }}>Add to Cart</Button>
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>
